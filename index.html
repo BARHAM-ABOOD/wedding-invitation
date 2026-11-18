@@ -144,7 +144,7 @@ a{color:#7A5F30}a:hover{color:#5C4622}
 </head>
 <body>
 
-<!-- عنصر الصوت مرتبط بملف music.mp3 في نفس المجلد للعمل مع GitHub Pages بكفاءة -->
+<!-- عنصر الصوت مرتبط بملف music.mp3 المحلي في نفس المجلد -->
 <audio id="bgMusic" loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -329,7 +329,7 @@ const ar = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
   tick();
   timer = setInterval(tick, 1000);
 
-  /* Open the envelope & Play Music automatically */
+  /* Open the envelope & trigger music playback on user interaction */
   var intro = document.getElementById('intro');
   var env = document.getElementById('env');
   var main = document.getElementById('main');
@@ -340,10 +340,12 @@ const ar = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
   function openInvite() {
     if (env.classList.contains('is-opening')) return;
     
-    // تشغيل الموسيقى فور النقر على زر فتح الدعوة
+    // تشغيل الصوت فور الضغط (الاستجابة لحدث المستخدم)
     if (bgMusic) {
-      bgMusic.play().catch(function(error) {
-        console.log("Autoplay prevented:", error);
+      bgMusic.play().then(function() {
+        console.log("Audio started successfully.");
+      }).catch(function(error) {
+        console.log("Audio playback error:", error);
       });
     }
 
