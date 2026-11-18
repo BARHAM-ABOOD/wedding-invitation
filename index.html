@@ -11,7 +11,7 @@
 <meta property="og:title" content="دعوة زفاف عبد الرحمن وفاتنة">
 <meta property="og:description" content="الأحد ٣ يناير ٢٠٢٧ · من ٦:٠٠ حتى ٨:٠٠ مساءً · قاعة ديلايت في عصيرة الشمالية - نابلس. افتح دعوتك.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23B0904F'/%3E%3Cpath d='M32 14 L50 32 L32 50 L14 32Z' fill='none' stroke='%23FBF8F2' stroke-width='3'/%3E%3C/svg%3E">
-<!-- استدعاء خطوط Google Fonts بما فيها Noto Nastaliq Urdu للخط الفارسي النستعليق -->
+<!-- استدعاء خطوط Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#F3EDE1}
@@ -26,12 +26,12 @@ a{color:#7A5F30}a:hover{color:#5C4622}
 .intro{position:fixed;inset:0;z-index:50;background:#F3EDE1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:16px;transition:opacity .9s ease, visibility .9s ease}
 .intro.gone{opacity:0;visibility:hidden;pointer-events:none}
 .intro-head{display:flex; flex-direction:column; align-items:center; gap:6px;}
-.intro-kicker{font-family:'Noto Nastaliq Urdu', serif; font-size:clamp(16px, 3vw, 22px); color:#6E5730; margin:0; text-align:center; line-height:1.6;}
-.intro-title{font-family:'Noto Nastaliq Urdu', serif; font-weight: 700;font-size:clamp(24px, 4.2vw, 34px);color:#2B2925;margin:0;text-align:center;line-height:1.5}
+.intro-kicker{font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; font-size:clamp(16px, 3vw, 22px); color:#6E5730; margin:0; text-align:center; line-height:1.6;}
+.intro-title{font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; font-size:clamp(24px, 4.2vw, 34px); color:#2B2925; margin:0; text-align:center; line-height:1.5}
 .env{position:relative;width:min(90vw, 420px);aspect-ratio:3/2;perspective:1400px;cursor:pointer}
 .env-back{position:absolute;inset:0;background:#5E1120;border-radius:6px;box-shadow:0 30px 60px -28px rgba(94,17,32,.5),0 10px 22px -12px rgba(0,0,0,.25)}
 .env-card{position:absolute;left:5%;right:5%;top:5%;bottom:5%;background:#FBF8F2;border-radius:3px;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px;gap:6px;transition:transform 1.1s cubic-bezier(.2,.7,.2,1) .7s;box-shadow:inset 0 0 0 4px #FBF8F2,inset 0 0 0 5px #CDB689; text-align: center;}
-.env-card-names{font-family:'Noto Nastaliq Urdu', serif; font-weight: 700;font-size: clamp(14px, 2.8vw, 18px);color:#7A5F30;line-height:1.4; display:flex; flex-direction:column; align-items:center; gap:8px;}
+.env-card-names{font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; font-size: clamp(14px, 2.8vw, 18px); color:#7A5F30; line-height:1.6; display:flex; flex-direction:column; align-items:center; gap:6px; padding:0 10px;}
 .env-front{position:absolute;inset:0;z-index:3;border-radius:6px;overflow:hidden;pointer-events:none}
 .env-front-fill{position:absolute;inset:0;background:#6B1626;clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
 .env-front svg{position:absolute;inset:0;width:100%;height:100%}
@@ -57,23 +57,25 @@ a{color:#7A5F30}a:hover{color:#5C4622}
 .corner.tl{top:14px;left:14px;transform:scaleX(-1)}
 .corner.br{bottom:14px;right:14px;transform:scaleY(-1)}
 .corner.bl{bottom:14px;left:14px;transform:scale(-1,-1)}
-.bismillah{font-family:'Noto Nastaliq Urdu', serif; font-size:clamp(16px, 3vw, 20px);color:#6E5730;margin:0;font-weight: 700;}
+
+/* تعديل خط النستعليق في كل النصوص المكتوبة به ليكون Bold وبدون ميلان ومنع القص تماماً */
+.bismillah{font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; font-size:clamp(16px, 3vw, 20px);color:#6E5730;margin:0;}
 .verse-ref{display:block;font-size:12px;color:#7A6E58;margin-top:6px;font-family:'Tajawal', sans-serif;}
 .divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:28px auto;color:#B0904F}
 .divider span{display:block;height:1px;width:clamp(36px, 12vw, 80px);background:#CDB689}
 
-/* تنسيق أسماء الأمهات مع خطوط أنيقة ومدروسة */
+/* تنسيق أسماء الأمهات بخط نستعليق عريض وخالٍ من الميلان مع مساحة أمان لمنع القص */
 .hosts-container{margin:18px 0 14px;}
 .hosts-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:nowrap;}
-.host{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;}
-.host-name{font-family:'Noto Nastaliq Urdu', serif;font-weight:700;font-size:clamp(12px, 2.8vw, 15px);color:#7A5F30;white-space:nowrap;}
+.host{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center; padding: 0 4px;}
+.host-name{font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; font-size:clamp(11px, 2.5vw, 14px);color:#7A5F30;white-space:nowrap; line-height: 1.8;}
 .host-role{font-size:10px;color:#6E5730;font-family:'Tajawal', sans-serif;}
 .hosts-and{font-size:14px;color:#B0904F;font-weight:700;align-self:center;}
 .hosts-lead{font-size:clamp(14px, 2.8vw, 17px);color:#3A3630;margin:12px 0 0;line-height:1.6;font-weight:500;}
 
-/* اسم العروسين بخط النستعليق فوق بعض مع فراغات عمودية فسيحة ومنسقة وبينهما قلب */
-.names{font-family:'Noto Nastaliq Urdu', serif;font-weight:700;margin:36px 0 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;line-height:1.5; width:100%;}
-.name{font-size:clamp(26px, 6.2vw, 42px);background:linear-gradient(100deg,#7E6130 0%,#A9884C 38%,#E2CD9C 50%,#A9884C 62%,#7E6130 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s ease-in-out infinite;padding:0 .1em; text-align: center; width: 100%;}
+/* اسم العروسين بخط النستعليق العريض فوق بعض مع مساحة كافية وبدون ميلان لمنع قص الكلمات مثل عبدالرحمن */
+.names{font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; margin:36px 0 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;line-height:1.6; width:100%;}
+.name{font-size:clamp(24px, 5.8vw, 38px);background:linear-gradient(100deg,#7E6130 0%,#A9884C 38%,#E2CD9C 50%,#A9884C 62%,#7E6130 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s ease-in-out infinite;padding:0 0.3em; text-align: center; width: 100%; font-weight:700; font-style:normal;}
 .amp{font-size: clamp(16px, 3.2vw, 20px); color:#B0904F; display: inline-flex; align-items: center; justify-content: center; margin: 4px 0;}
 
 .blessing{font-size:clamp(14px, 2.8vw, 17px);line-height:1.8;color:#4A4438;margin:22px auto 0;max-width:28em;font-weight: 400;}
@@ -89,7 +91,7 @@ a{color:#7A5F30}a:hover{color:#5C4622}
 .unit{border:1px solid #CDB689;padding:12px 2px;display:flex;flex-direction:column;align-items:center;gap:4px;background:#FDFBF7}
 .unit-num{font-family:'Tajawal', sans-serif;font-weight:700;font-size:clamp(22px, 5.5vw, 36px);line-height:1;color:#5E1120;font-variant-numeric:tabular-nums}
 .unit-label{font-size:13px;color:#6E5730;font-weight: 500;}
-.celebrate{margin-top:20px;font-family:'Noto Nastaliq Urdu', serif;font-weight: 700;font-size:clamp(20px, 4vw, 30px);color:#7A5F30;line-height:1.6}
+.celebrate{margin-top:20px;font-family:'Noto Nastaliq Urdu', serif; font-weight:700; font-style:normal; font-size:clamp(20px, 4vw, 30px);color:#7A5F30;line-height:1.6}
 
 .details{display:flex;flex-direction:column;gap:0;margin-top:20px;text-align:right}
 .row{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #EAE0C9}
@@ -144,7 +146,7 @@ a{color:#7A5F30}a:hover{color:#5C4622}
 </head>
 <body>
 
-<!-- عنصر الصوت مرتبط بملف music.mp3 المحلي في نفس المجلد -->
+<!-- عنصر الصوت المحلي -->
 <audio id="bgMusic" loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
@@ -159,7 +161,7 @@ a{color:#7A5F30}a:hover{color:#5C4622}
   <div class="env" id="env" aria-hidden="true">
     <div class="env-back"></div>
     <div class="env-card">
-      <!-- أسماء العروسين بخط النستعليق فوق بعض عند فتح المغلف -->
+      <!-- أسماء العروسين بخط النستعليق العريض غير المائل ومنع القص تماماً -->
       <div class="env-card-names">
         <span>عبدالرحمن</span>
         <span style="color:#B0904F; font-size:12px;">♥</span>
@@ -193,7 +195,7 @@ a{color:#7A5F30}a:hover{color:#5C4622}
     <p class="verse">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾<span class="verse-ref">سورة الروم · ٢١</span></p>
     <div class="divider" aria-hidden="true"><span></span><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0 L14 7 L7 14 L0 7 Z" fill="currentColor"></path></svg><span></span></div>
     
-    <!-- حرم الحاج عبدالله فتحي برهم وحرم السيد يحيى ابراهيم صلاح مع يتشرفن بدعوتكن -->
+    <!-- أسماء الأمهات بخط نستعليق عريض وخالٍ من الميلان -->
     <div class="hosts-container">
       <div class="hosts-row">
         <div class="host">
@@ -209,7 +211,7 @@ a{color:#7A5F30}a:hover{color:#5C4622}
       <p class="hosts-lead">يتشرّفن بدعوتكن لحضور حفل زفاف نجليهما</p>
     </div>
     
-    <!-- اسم العروسين بخط النستعليق فوق بعض مع فراغات عمودية فسيحة ومنسقة وبينهما قلب -->
+    <!-- اسم العروسين بخط النستعليق العريض ومنع قص الكلمات -->
     <h2 class="names">
       <span class="name" data-f="groom">عبدالرحمن</span>
       <span class="amp"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
@@ -337,14 +339,16 @@ const ar = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
   var seal = document.getElementById('seal');
   var bgMusic = document.getElementById('bgMusic');
 
+  // مستوى الصوت هادئ كخلفية (30%)
+  if (bgMusic) {
+    bgMusic.volume = 0.3;
+  }
+
   function openInvite() {
     if (env.classList.contains('is-opening')) return;
     
-    // تشغيل الصوت فور الضغط (الاستجابة لحدث المستخدم)
     if (bgMusic) {
-      bgMusic.play().then(function() {
-        console.log("Audio started successfully.");
-      }).catch(function(error) {
+      bgMusic.play().catch(function(error) {
         console.log("Audio playback error:", error);
       });
     }
@@ -360,6 +364,15 @@ const ar = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
   if (openBtn) openBtn.onclick = openInvite;
   if (env) env.onclick = openInvite;
   if (seal) seal.onclick = openInvite;
+
+  // إيقاف الصوت تلقائياً عند تصغير التطبيق أو مغادرة الصفحة
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      if (bgMusic && !bgMusic.paused) {
+        bgMusic.pause();
+      }
+    }
+  });
 })();
 
 /* RSVP interactive & disabling counter on apology */
@@ -389,7 +402,7 @@ if(document.getElementById('rsvpForm')) {
       ? `السلام عليكم 🤍\nأنا ${name}، بإذن الله سأحضر حفل زفاف عبدالرحمن وفاتنة.\nعدد الحضور: ${count}\nألف مبروك!`
       : `السلام عليكم 🤍\nأنا ${name}، أعتذر عن حضور حفل زفاف عبدالرحمن وفاتنة.\nألف مبروك وبالرفاه والبنين!`;
     if(CONFIG.WHATSAPP){
-      window.open('https://wa.me/' + CONFIG.WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
+      window.open('https://wa.me/' + CONFIG.WHATSAPP + '?text=' + encodeURIComponent(msg),'_blank');
     }
     document.getElementById('thanks').style.display = 'block';
   };
