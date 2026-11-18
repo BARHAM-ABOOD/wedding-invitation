@@ -333,9 +333,9 @@ const ar = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
   var seal = document.getElementById('seal');
   var bgMusic = document.getElementById('bgMusic');
 
-  // ضبط مستوى الصوت على 100% (1.0) بأقصى قوة
+  // ضبط مستوى الصوت على 80% (0.8)
   if (bgMusic) {
-    bgMusic.volume = 1.0;
+    bgMusic.volume = 0.8;
   }
 
   function openInvite() {
